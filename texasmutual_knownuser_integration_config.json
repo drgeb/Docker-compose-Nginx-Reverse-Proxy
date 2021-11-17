@@ -1,0 +1,229 @@
+{
+    "ConfigDataVersion": "1.0.0.3",
+    "Description": "added and configured new waiting room action and trigger for nginx demo",
+    "Integrations": [
+        {
+            "Name": "nginx-springboot-queueit-action",
+            "ActionType": "Queue",
+            "EventId": "poc011",
+            "CookieDomain": "",
+            "LayoutName": "Ticket Layout by Queue-it",
+            "Culture": "en-US",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "/",
+                            "ValuesToCompare": null,
+                            "UrlPart": "PageUrl",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        },
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "ningx-queueit-demo",
+                            "ValuesToCompare": null,
+                            "UrlPart": "HostName",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        },
+        {
+            "Name": "spring-cloud-gateway-action",
+            "ActionType": "Queue",
+            "EventId": "scg001",
+            "CookieDomain": "",
+            "LayoutName": "Christmas Layout by Queue-it",
+            "Culture": "en-US",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "/tg",
+                            "ValuesToCompare": null,
+                            "UrlPart": "PageUrl",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        },
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "localhost",
+                            "ValuesToCompare": null,
+                            "UrlPart": "HostName",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        },
+        {
+            "Name": "poc-java-petstore",
+            "ActionType": "Queue",
+            "EventId": "007",
+            "CookieDomain": "",
+            "LayoutName": "Christmas Layout by Queue-it",
+            "Culture": "en-US",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "/vets",
+                            "ValuesToCompare": null,
+                            "UrlPart": "PageUrl",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        },
+        {
+            "Name": "poc-known-user-action-helloworld",
+            "ActionType": "Queue",
+            "EventId": "poc009",
+            "CookieDomain": "",
+            "LayoutName": "TXM",
+            "Culture": "en-US",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "/",
+                            "ValuesToCompare": null,
+                            "UrlPart": "PageUrl",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        },
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "poc-helloworld",
+                            "ValuesToCompare": null,
+                            "UrlPart": "HostName",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        },
+        {
+            "Name": "dev-all-pages",
+            "ActionType": "Queue",
+            "EventId": "mike1",
+            "CookieDomain": "",
+            "LayoutName": "Christmas Layout by Queue-it",
+            "Culture": "",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "dev.cloudfront.net",
+                            "ValuesToCompare": null,
+                            "UrlPart": "PageUrl",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        },
+        {
+            "Name": "wild-rydes",
+            "ActionType": "Queue",
+            "EventId": "poc009",
+            "CookieDomain": "",
+            "LayoutName": null,
+            "Culture": "",
+            "ExtendCookieValidity": true,
+            "CookieValidityMinute": 20,
+            "Triggers": [
+                {
+                    "TriggerParts": [
+                        {
+                            "Operator": "Contains",
+                            "ValueToCompare": "d1z48p5xzosc4s.cloudfront.net",
+                            "ValuesToCompare": null,
+                            "UrlPart": "HostName",
+                            "CookieName": null,
+                            "HttpHeaderName": null,
+                            "ValidatorType": "UrlValidator",
+                            "IsNegative": false,
+                            "IsIgnoreCase": true
+                        }
+                    ],
+                    "LogicalOperator": "And"
+                }
+            ],
+            "QueueDomain": "texasmutual.queue-it.net",
+            "RedirectLogic": "AllowTParameter",
+            "ForcedTargetUrl": ""
+        }
+    ],
+    "CustomerId": "texasmutual",
+    "AccountId": "texasmutual",
+    "Version": 19,
+    "PublishDate": "2021-11-17T22:07:40.1826306Z"
+}
