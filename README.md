@@ -1,4 +1,4 @@
-QueueIt ocker-compose-Nginx-Reverse-Proxy
+QueueIt Docker-compose-Nginx-Reverse-Proxy
 ===================================
 
 Tutorial
@@ -12,6 +12,9 @@ Modified using steps descibed in https://github.com/queueit/KnownUser.V3.Lua/tre
 Step 1 
 Configure CUSTOMER_ID and SECRET_KEY in tpl/default.conf file.
 
+```
+code tpl/default.conf 
+```
 
 Step 2
 Build the reverseproxy docker image.
