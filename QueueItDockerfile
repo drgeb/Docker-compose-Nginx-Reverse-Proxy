@@ -10,5 +10,8 @@ COPY Handlers/KnownUserNginxHandler.lua ./usr/queueit/KnownUserNginxHandler.lua
 COPY tpl/nginx.conf /etc/nginx/nginx.conf
 COPY tpl/default.conf /etc/nginx/conf.d/default.conf
 
+# 3. Add the Queue-it handler to a specific location
+COPY texasmutual_knownuser_integration_config.json /usr/queueit/integrationconfig.json
+
 RUN mkdir -p /etc/nginx/logs/ && \
     chmod -R 755 /etc/nginx/logs/;
