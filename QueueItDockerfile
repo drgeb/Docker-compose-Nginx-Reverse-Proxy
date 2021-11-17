@@ -1,0 +1,14 @@
+FROM fabiocicerchia/nginx-lua
+
+COPY content /usr/share/nginx/html
+# 1. Copy the necessary files to your NGINX filesystem
+COPY SDK /usr/queueit/SDK
+COPY Helpers ./usr/queueit/Helpers
+# Copy the main handler script:
+COPY Handlers/KnownUserNginxHandler.lua ./usr/queueit/KnownUserNginxHandler.lua
+
+COPY tpl/nginx.conf /etc/nginx/nginx.conf
+COPY tpl/default.conf /etc/nginx/conf.d/default.conf
+
+RUN mkdir -p /etc/nginx/logs/ && \
+    chmod -R 755 /etc/nginx/logs/;

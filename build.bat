@@ -1,0 +1,1 @@
+docker build --label reverseproxy  -t reverseproxy --file QueueItDockerfile .
